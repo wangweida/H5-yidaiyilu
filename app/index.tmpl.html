@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="x5-orientation" content="portrait"><!-- 强制竖屏 -->
+    <meta name="x5-fullscreen" content="true"><!-- 全屏显示去工具栏地址栏 -->
+    <!-- UC浏览器竖屏与全屏 -->
+    <meta name="screen-orientation" content="true">
+    <meta name="full-screen" content="yes">
+    <!-- 禁止电话与邮件 -->
+    <meta name="format-detection" content="telephone=no, email=no">
+    <script src="http://www.cnr.cn/global/libs/lib-flexible/flexible_css.js"></script>
+    <script src="http://www.cnr.cn/global/libs/lib-flexible/flexible.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <link rel="stylesheet" href="http://www.cnr.cn/global/css/animate/animate.css">
+    <title>所谓人间天堂大概就是这个样子吧</title>
+</head>
+<body>
+    <div class="loading">
+        <div class="camel"></div>
+        <div class="loading-txt">加载中...</div>
+        <img src="images/cnr.png" alt="" class="first-logo">
+    </div>
+    <div class="preload" style="position: absolute; opacity: 0;z-index: -999;">
+        <div data-src="left-btn.png"></div>
+        <div data-src="right-btn-active.png"></div>
+        <div data-src="share-content.png"></div>
+        <div data-src="arrows.png"></div>
+        <div data-src="music-off.png"></div>
+    </div>
+    <div data-src="music-on.png" class="music-btn"></div>
+    <div data-src="long-page-wrapper.png" class="long-page-wrapper pos">
+        <div data-src="long-bg.jpg" class="long-bg distance pos"></div>
+        <div data-src="sun.png" class="sun pos"></div>
+        <div data-src="cloud1.png" class="cloud1 pos"></div>
+        <div data-src="cloud2.png" class="cloud2 pos"></div>
+        <div data-src="cloud3.png" class="cloud3 pos"></div>
+        <div data-src="cloud4.png" class="cloud4 pos"></div>
+        <div data-src="cloud5.png" class="cloud5 pos"></div>
+        <div data-src="cnr.png" class="cnr pos"></div>
+        <div data-src="track.png" class="track pos"></div>
+        <div data-src="train.png" class="train pos"></div>
+        <div data-src="title.png" class="title pos"></div>
+        <div data-src="photo-record.png" class="photo-record pos"></div>
+    </div>
+    <div class="cover-area">
+        <div class="photo-record-copy pos"></div>
+    </div>
+    <div data-src="photo-wrapper.jpg" class="photo-wrapper pos">
+        <div data-src="txt1.png" class="txt1 pos"></div>
+        <div class="btn-wrapper">
+            <div data-src="left-btn-active.png" class="left-btn btn pos"></div>
+            <div data-src="right-btn.png" class="right-btn btn pos"></div>
+            <div data-src="wood.png" class="wood pos"></div>
+        </div>
+        <div class="point pos"></div>
+        <div data-src="end.png" class="end pos"></div>
+        <div data-src="photo-wrapper.jpg" class="select-photo-wrapper pos selected">
+            <div data-src="person4.jpg" class="person person4 pos item"></div>
+            <div data-src="person5.jpg" class="person person5 pos item"></div>
+            <div data-src="person6.jpg" class="person person6 pos item"></div>
+            <div data-src="person7.jpg" class="person person7 pos item"></div>
+            <div data-src="person10.jpg" class="person person10 pos item"></div>
+            <div data-src="person8.jpg" class="person person8 pos item"></div>
+            <div data-src="person11.jpg" class="person person11 pos item"></div>
+            <div data-src="person3.jpg" class="person person3 pos item"></div>
+            <div data-src="person9.jpg" class="person person9 pos item"></div>
+            <div data-src="person12.jpg" class="person person12 pos item"></div>
+            <div data-src="person1.jpg" class="person person1 pos item"></div>
+            <div data-src="person2.jpg" class="person person2 pos item"></div>
+            <div class="scale-photo-wrapper">
+                <p class="content-title pos"></p>
+                <p class="aurthor pos"></p>
+            </div>
+        </div>
+        <div data-src="photo-wrapper.jpg" class="select-photo-wrapper pos">
+            <div data-src="scenery1.jpg" class="scenery person4 pos scale item"></div>
+            <div data-src="scenery2.jpg" class="scenery person5 pos scale item"></div>
+            <div data-src="scenery3.jpg" class="scenery person6 pos scale item"></div>
+            <div data-src="scenery4.jpg" class="scenery person7 pos scale item"></div>
+            <div data-src="scenery5.jpg" class="scenery person10 pos scale item"></div>
+            <div data-src="scenery6.jpg" class="scenery person8 pos scale item"></div>
+            <div data-src="scenery7.jpg" class="scenery person11 pos scale item"></div>
+            <div data-src="scenery8.jpg" class="scenery person3 pos scale item"></div>
+            <div data-src="scenery9.jpg" class="scenery person9 pos scale item"></div>
+            <div data-src="scenery10.jpg" class="scenery person12 pos scale item"></div>
+            <div data-src="scenery11.jpg" class="scenery person1 pos scale item"></div>
+            <div data-src="scenery12.jpg" class="scenery person2 pos scale item"></div>
+            <div class="scale-photo-wrapper">
+                <p class="content-title pos"></p>
+                <p class="aurthor pos"></p>
+            </div>
+        </div>
+    </div>
+    <div data-src="last-page-bg.jpg" class="last-page">
+        <div data-src="copy.png" class="copy"></div>
+        <div data-src="txt2.png" class="txt2"></div>
+        <div data-src="repeat.png" class="repeat"></div>
+        <div data-src="click-share.png" class="click-share"></div>
+        <div data-src="cnr.png" class="last-page-logo pos"></div>
+        <div class="share-page pos">
+            <div data-src="share-content.png" class="share-content"></div>
+            <div data-src="arrows.png" class="arrows pos"></div>
+        </div>
+    </div>
+
+    <audio id="audio" autoplay loop src=""></audio>
+    <audio id="kada" src=""></audio>
+</body>
+</html>
