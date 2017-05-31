@@ -8,6 +8,8 @@ import '../static/js/preLoad';
 import { repeatAndShare, musicBtn } from '../static/js/reset';
 import { animationPromise } from '../static/js/promiseFun';
 import { removeSameClass, calcTransform } from '../static/js/util';
+import personTxtArr from '../json/personTxt';
+import sceneryTxtArr from '../json/sceneryTxt';
 
 (function preload($) {
     const $oLoadingTxt = $('.loading-txt');
@@ -19,7 +21,7 @@ import { removeSameClass, calcTransform } from '../static/js/util';
         },
         allFn() {
             setTimeout(() => {
-                $('.loading')[0].style.transform = 'translate3d(0, -100%, 0)';
+                $('.loading').css({ transform: 'translate3d(0, -100%, 0)' });
             }, 2000);
         },
         urlFn(ele) {
@@ -31,7 +33,7 @@ import { removeSameClass, calcTransform } from '../static/js/util';
     });
 }(Zepto));
 
-(function global($) {
+(function global($, personJson, sceneryJson) {
     /* eslint-disable global-require */
     const kadaUrl = require('../media/kada.mp3');
 
@@ -69,106 +71,8 @@ import { removeSameClass, calcTransform } from '../static/js/util';
         util: {
             $aTitle: $('.content-title'),
             $aAuthor: $('.aurthor'),
-            personTxtArr: [
-                {
-                    title: '哭墙前的祈祷',
-                    aurthor: '贺勋毅',
-                },
-                {
-                    title: '牧驼',
-                    aurthor: '邹宝良',
-                },
-                {
-                    title: '祈福',
-                    aurthor: '陈文格',
-                },
-                {
-                    title: '入戏',
-                    aurthor: '张旭',
-                },
-                {
-                    title: '舞动神鹰',
-                    aurthor: '赵登文',
-                },
-                {
-                    title: '祈祷',
-                    aurthor: '贺勋毅',
-                },
-                {
-                    title: '乡村篮球赛',
-                    aurthor: '黎少敏',
-                },
-                {
-                    title: '勇敢者游戏',
-                    aurthor: '刘锦兵',
-                },
-                {
-                    title: '我的羊群我的家',
-                    aurthor: '赵登文',
-                },
-                {
-                    title: '一起赶巴扎',
-                    aurthor: '张广启',
-                },
-                {
-                    title: '在战争与和平边缘的以色列人',
-                    aurthor: '贺勋毅',
-                },
-                {
-                    title: '过河',
-                    aurthor: '袁奕',
-                },
-            ],
-            sceneryTxtArr: [
-                {
-                    title: '云蒸霞蔚，樵村渔浦',
-                    aurthor: '黄恒日',
-                },
-                {
-                    title: '边关牧羊曲',
-                    aurthor: '李淮军',
-                },
-                {
-                    title: '不一样的月牙泉',
-                    aurthor: '蒋国聪',
-                },
-                {
-                    title: '古刹流萤',
-                    aurthor: '谢俊',
-                },
-                {
-                    title: '江山多娇',
-                    aurthor: '徐贵书',
-                },
-                {
-                    title: '梦回乌兰布统',
-                    aurthor: '谢俊',
-                },
-                {
-                    title: '牧归',
-                    aurthor: '高志',
-                },
-                {
-                    title: '日出',
-                    aurthor: '娄宝利',
-                },
-                {
-                    title: '石猴星迹',
-                    aurthor: '谢俊',
-                },
-                {
-                    title: '伊宁雪山下的华灯大道',
-                    aurthor: '金沙江',
-                },
-                {
-                    title: '转场',
-                    aurthor: '党彤',
-                },
-                {
-                    title: '走进神秘的扎尕那',
-                    aurthor: '曾卫民',
-                },
-            ],
+            personTxtArr: personJson,
+            sceneryTxtArr: sceneryJson,
             toggleTxt(pageIndex, selectIndex) {
                 if (pageIndex === 0) {
                     this.$aTitle.eq(pageIndex).html(this.personTxtArr[selectIndex].title);
@@ -347,4 +251,4 @@ import { removeSameClass, calcTransform } from '../static/js/util';
     };
 
     app.init();
-}(Zepto, window));
+}(Zepto, personTxtArr, sceneryTxtArr));
